@@ -941,3 +941,409 @@ const EOI_QUESTIONS = [
     hack: '<strong>"Thoroughness" = STACK methods.</strong> The right answer accumulates ("not only... but also," "in addition to," multiple specific actions). Single-method or summary choices fail to show the breadth.'
   }
 ];;
+
+const SEC_QUESTIONS = [
+  // ============ FORM, STRUCTURE & SENSE ============
+  {
+    n: 1, id: '96c720af', skill: 'form', skillLabel: 'Form, Structure & Sense', difficulty: 'easy',
+    type: 'sec',
+    passage: 'Atoms in a synchrotron, a type of circular particle accelerator, travel faster and faster until they <span class="blank">_______</span> a desired energy level, at which point they are diverted to collide with a target, smashing the atoms.',
+    question: 'Which choice completes the text so that it conforms to the conventions of Standard English?',
+    choices: [
+      { letter: 'A', text: 'will reach' },
+      { letter: 'B', text: 'reach' },
+      { letter: 'C', text: 'had reached' },
+      { letter: 'D', text: 'are reaching' }
+    ],
+    correct: 'B',
+    whyCorrect: 'The other verbs in the sentence are <strong>present tense</strong> ("travel," "are diverted"). Match them: "reach" (present) is the only option that fits.',
+    whyWrong: {
+      A: '"Will reach" is future tense — clashes with the present tense verbs around it.',
+      C: '"Had reached" is past perfect — clashes with present tense around it.',
+      D: '"Are reaching" suggests an action <em>currently in progress</em>. The other verbs describe general behavior, not an in-progress event.'
+    },
+    hack: '<strong>Match the tenses around the blank.</strong> Find the other verbs in the sentence. If they\'re present, your answer is present. If past, past. Simple as that.'
+  },
+  {
+    n: 2, id: 'e6f2dba6', skill: 'form', skillLabel: 'Form, Structure & Sense', difficulty: 'easy',
+    type: 'sec',
+    passage: 'According to the traditional RYB (red-yellow-blue) color model, yellow is a complementary color to purple. However, yellow <span class="blank">_______</span> considered complementary to blue in modern color theory.',
+    question: 'Which choice completes the text so that it conforms to the conventions of Standard English?',
+    choices: [
+      { letter: 'A', text: 'is' },
+      { letter: 'B', text: 'having been' },
+      { letter: 'C', text: 'to be' },
+      { letter: 'D', text: 'being' }
+    ],
+    correct: 'A',
+    whyCorrect: '"Is considered" supplies the main verb the sentence needs. Without "is," the sentence has no working verb at all.',
+    whyWrong: {
+      B: '"Having been considered" is a participle, not a working verb. Sentence has no verb → broken sentence.',
+      C: '"To be considered" is an infinitive, not a working verb. Sentence has no verb → broken sentence.',
+      D: '"Being considered" is a participle, not a working verb. Sentence has no verb → broken sentence.'
+    },
+    hack: '<strong>Every sentence needs a real, working verb.</strong> If the choices include weird forms like "being," "to be," "having been" — those aren\'t real verbs. Pick the plain one (is, was, has, etc.).'
+  },
+  {
+    n: 3, id: 'fced396a', skill: 'form', skillLabel: 'Form, Structure & Sense', difficulty: 'hard',
+    type: 'sec',
+    passage: 'The Herfindahl-Hirschman Index (HHI), a commonly used measure of competition between companies in a particular market, ranges from a score of zero to 10,000 points. Compared with that of a highly concentrated market — that is, a market controlled by very few companies — <span class="blank">_______</span>',
+    question: 'Which choice completes the text so that it conforms to the conventions of Standard English?',
+    choices: [
+      { letter: 'A', text: 'a market that is less concentrated will have a much lower HHI score.' },
+      { letter: 'B', text: 'the HHI score of a less concentrated market will be much lower.' },
+      { letter: 'C', text: 'when a market is less concentrated, its HHI score will be much lower.' },
+      { letter: 'D', text: 'a less concentrated market will have an HHI score that is much lower.' }
+    ],
+    correct: 'B',
+    whyCorrect: 'The opening says "Compared with <strong>that</strong> [the HHI score] of a highly concentrated market." What follows must be the <strong>other HHI score</strong> being compared. Only choice B starts with "the HHI score..." — direct match.',
+    whyWrong: {
+      A: 'Starts with "a market." But we\'re comparing HHI <strong>scores</strong>, not markets. Dangling modifier.',
+      C: 'Adds "when a market is less concentrated" — confusing and creates an ambiguous "its."',
+      D: 'Starts with "a less concentrated market." Same problem as A — we\'re comparing scores, not markets.'
+    },
+    hack: '<strong>What follows "Compared with X" must equal X.</strong> If "Compared with [the HHI score]" opens, the next thing must be ANOTHER score. Not a market. Not a person. A score.'
+  },
+  {
+    n: 4, id: 'd47bb0a4', skill: 'form', skillLabel: 'Form, Structure & Sense', difficulty: 'easy',
+    type: 'sec',
+    passage: 'Objects ranging from the Kikkoman soy sauce bottle to the Yamaha VMAX motorcycle to the Komachi bullet train <span class="blank">_______</span> designed by twentieth-century industrial designer Kenji Ekuan.',
+    question: 'Which choice completes the text so that it conforms to the conventions of Standard English?',
+    choices: [
+      { letter: 'A', text: 'was' },
+      { letter: 'B', text: 'is' },
+      { letter: 'C', text: 'has been' },
+      { letter: 'D', text: 'were' }
+    ],
+    correct: 'D',
+    whyCorrect: 'Subject is "<strong>Objects</strong>" (plural). The verb must be plural: "were."',
+    whyWrong: {
+      A: '"Was" is singular — doesn\'t match plural "objects."',
+      B: '"Is" is singular — doesn\'t match plural "objects."',
+      C: '"Has been" is singular — doesn\'t match plural "objects."'
+    },
+    hack: '<strong>Find the real subject first.</strong> Don\'t get fooled by stuff between the subject and verb. The subject here is "objects" (plural), not "bottle" or "motorcycle" or "train" (singular distractions sandwiched in).'
+  },
+  {
+    n: 5, id: 'e3b72630', skill: 'form', skillLabel: 'Form, Structure & Sense', difficulty: 'easy',
+    type: 'sec',
+    passage: 'In the historical novel <em>The Surrender Tree</em>, Cuban American author Margarita Engle uses poetry rather than prose <span class="blank">_______</span> the true story of Cuban folk hero Rosa La Bayamesa.',
+    question: 'Which choice completes the text so that it conforms to the conventions of Standard English?',
+    choices: [
+      { letter: 'A', text: 'tells' },
+      { letter: 'B', text: 'told' },
+      { letter: 'C', text: 'is telling' },
+      { letter: 'D', text: 'to tell' }
+    ],
+    correct: 'D',
+    whyCorrect: 'Engle uses poetry <strong>in order to</strong> tell the story. "To tell" expresses the purpose. Standard infinitive construction.',
+    whyWrong: {
+      A: '"Tells" would need to be a new verb on its own — illogical here. Engle already uses poetry; "tells" doubles up.',
+      B: '"Told" makes the verb past tense — clashes with present "uses."',
+      C: '"Is telling" has the same problem as "tells" — doubled verb.'
+    },
+    hack: '<strong>"To + verb" = purpose / reason.</strong> When a sentence is explaining WHY something happens, the infinitive ("to tell," "to make," "to show") is usually the answer.'
+  },
+  {
+    n: 6, id: 'd2b81427', skill: 'form', skillLabel: 'Form, Structure & Sense', difficulty: 'hard',
+    type: 'sec',
+    passage: 'In assessing the films of Japanese director Akira Kurosawa, <span class="blank">_______</span> have missed his equally deep engagement with Japanese artistic traditions such as Noh theater.',
+    question: 'Which choice completes the text so that it conforms to the conventions of Standard English?',
+    choices: [
+      { letter: 'A', text: 'many critics have focused on Kurosawa\'s use of Western literary sources but' },
+      { letter: 'B', text: 'Kurosawa\'s use of Western literary sources has been the focus of many critics, who' },
+      { letter: 'C', text: 'there are many critics who have focused on Kurosawa\'s use of Western literary sources, but they' },
+      { letter: 'D', text: 'the focus of many critics has been on Kurosawa\'s use of Western literary sources; they' }
+    ],
+    correct: 'A',
+    whyCorrect: '"In assessing the films of Kurosawa" must be done by a <strong>person</strong>. Choice A puts "many critics" right after the modifier. Critics do the assessing — makes sense.',
+    whyWrong: {
+      B: 'Puts "Kurosawa\'s use of Western sources" after the modifier — implying his SOURCES did the assessing. Nonsense.',
+      C: 'Puts "there" after the modifier — "there" can\'t assess anything.',
+      D: 'Puts "the focus" after the modifier — focuses can\'t assess films.'
+    },
+    hack: '<strong>Who/what is doing the action in the opening phrase?</strong> Whatever comes right after the comma must be THAT person/thing. "In assessing films" — a person assesses, so a person noun must follow.'
+  },
+  {
+    n: 7, id: '512f0ac9', skill: 'form', skillLabel: 'Form, Structure & Sense', difficulty: 'hard',
+    type: 'sec',
+    passage: 'Working from an earlier discovery of Charpentier\'s, chemists Emmanuelle Charpentier and Jennifer Doudna — winners of the 2020 Nobel Prize in Chemistry — re-created and then reprogrammed the so-called "genetic scissors" of a species of DNA-cleaving bacteria <span class="blank">_______</span> a tool that is revolutionizing the field of gene technology.',
+    question: 'Which choice completes the text so that it conforms to the conventions of Standard English?',
+    choices: [
+      { letter: 'A', text: 'to forge' },
+      { letter: 'B', text: 'forging' },
+      { letter: 'C', text: 'forged' },
+      { letter: 'D', text: 'and forging' }
+    ],
+    correct: 'A',
+    whyCorrect: 'The chemists re-created the scissors <strong>in order to</strong> forge a tool. "To forge" expresses the purpose.',
+    whyWrong: {
+      B: 'Without a comma, "forging" attaches to the nearest noun ("bacteria") — implying the BACTERIA are forging. Illogical.',
+      C: '"Forged" would need an "and" before it to be parallel to the other past-tense verbs. Without it, the sentence breaks.',
+      D: '"Forging" is present progressive — clashes with the past-tense verbs ("re-created," "reprogrammed").'
+    },
+    hack: '<strong>"To + verb" = the WHY.</strong> Same rule as before. Chemists did X "to forge" a tool. The infinitive explains the reason.'
+  },
+  {
+    n: 8, id: '20ea68b7', skill: 'form', skillLabel: 'Form, Structure & Sense', difficulty: 'medium',
+    type: 'sec',
+    passage: 'It can take time for proposed amendments to the US Constitution to become law. For example, the Twenty-Second Amendment, which limits the number of <span class="blank">_______</span> can serve, was first proposed in 1947 but wasn\'t approved by the required three-fourths majority of state legislatures until 1951.',
+    question: 'Which choice completes the text so that it conforms to the conventions of Standard English?',
+    choices: [
+      { letter: 'A', text: 'terms presidents' },
+      { letter: 'B', text: 'term\'s presidents' },
+      { letter: 'C', text: 'term\'s president\'s' },
+      { letter: 'D', text: 'terms president\'s' }
+    ],
+    correct: 'A',
+    whyCorrect: 'The amendment limits the number of <strong>terms</strong> that <strong>presidents</strong> can serve. Both plural. No possession involved.',
+    whyWrong: {
+      B: '"Term\'s" = singular possessive (one term\'s something). Wrong — we mean multiple terms.',
+      C: 'Both possessives. Wrong on both counts — no ownership here.',
+      D: '"President\'s" = singular possessive. Wrong — applies to presidents in general.'
+    },
+    hack: '<strong>Apostrophe = possession.</strong> If the noun isn\'t OWNING something, no apostrophe. Read it: "number of terms presidents can serve" — terms aren\'t owning anything, presidents aren\'t owning anything. Just plurals.'
+  },
+  {
+    n: 9, id: 'eeb14722', skill: 'form', skillLabel: 'Form, Structure & Sense', difficulty: 'medium',
+    type: 'sec',
+    passage: 'The soundtrack to Mira Nair\'s 1991 film <em>Mississippi Masala</em> expressively captures the clashing of cultures that happens when <span class="blank">_______</span> (a young Indian woman from Uganda and a young African American man from Mississippi) meet.',
+    question: 'Which choice completes the text so that it conforms to the conventions of Standard English?',
+    choices: [
+      { letter: 'A', text: 'it\'s two protagonists' },
+      { letter: 'B', text: 'its two protagonist\'s' },
+      { letter: 'C', text: 'it\'s two protagonist\'s' },
+      { letter: 'D', text: 'its two protagonists' }
+    ],
+    correct: 'D',
+    whyCorrect: '"<strong>Its</strong>" = possessive (the film\'s protagonists). "<strong>Protagonists</strong>" = plural (there are two). Both correct.',
+    whyWrong: {
+      A: '"It\'s" means "it is" (contraction), not "belonging to it."',
+      B: '"Protagonist\'s" = singular possessive. But the sentence says there are <em>two</em> protagonists.',
+      C: 'Both errors — wrong "it\'s" AND wrong "protagonist\'s."'
+    },
+    hack: '<strong>"It\'s" = "it is." "Its" = belongs to it.</strong> Try replacing "it\'s" with "it is" in the sentence — if it doesn\'t make sense, use "its."'
+  },
+  {
+    n: 10, id: 'dc645172', skill: 'form', skillLabel: 'Form, Structure & Sense', difficulty: 'hard',
+    type: 'sec',
+    passage: 'The artistic talents of Barbara Chase-Riboud, most known for her 1979 historical novel <em>Sally Hemings</em> and the conversation it inspired, <span class="blank">_______</span> limited to the realm of prose: she first excelled in sculpture, where her affinity for bronze — a material she described as "timeless" due to its use across eras and cultures — became part of her artistic identity.',
+    question: 'Which choice completes the text so that it conforms to the conventions of Standard English?',
+    choices: [
+      { letter: 'A', text: 'hasn\'t been' },
+      { letter: 'B', text: 'wasn\'t' },
+      { letter: 'C', text: 'isn\'t' },
+      { letter: 'D', text: 'aren\'t' }
+    ],
+    correct: 'D',
+    whyCorrect: 'Subject is "<strong>talents</strong>" (plural). Verb must be plural: "aren\'t."',
+    whyWrong: {
+      A: '"Hasn\'t been" is singular.',
+      B: '"Wasn\'t" is singular.',
+      C: '"Isn\'t" is singular.'
+    },
+    hack: '<strong>Cross out everything between the subject and verb.</strong> "The artistic talents [of Barbara Chase-Riboud, most known for her 1979 novel...] aren\'t limited." Ignore the middle. Subject = "talents" (plural). Verb = plural.'
+  },
+  {
+    n: 11, id: '57998dd3', skill: 'form', skillLabel: 'Form, Structure & Sense', difficulty: 'easy',
+    type: 'sec',
+    passage: 'Obsidian is a kind of volcanic glass formed when lava cools so quickly that the atoms inside it cannot arrange themselves in a crystalline structure. You <span class="blank">_______</span> more about obsidian\'s structure, which is classified as amorphous, in a later chapter.',
+    question: 'Which choice completes the text so that it conforms to the conventions of Standard English?',
+    choices: [
+      { letter: 'A', text: 'had learned' },
+      { letter: 'B', text: 'had been learning' },
+      { letter: 'C', text: 'will learn' },
+      { letter: 'D', text: 'have learned' }
+    ],
+    correct: 'C',
+    whyCorrect: '"In a later chapter" = the future. Verb must be future tense: "will learn."',
+    whyWrong: {
+      A: '"Had learned" = past perfect (something completed in the past). Wrong direction.',
+      B: '"Had been learning" = past — wrong direction.',
+      D: '"Have learned" = present perfect (already done). But the reader hasn\'t learned it yet — it\'s coming up.'
+    },
+    hack: '<strong>Time markers tell you the tense.</strong> "In a later chapter" = future. "Yesterday" = past. "Currently" = present. Find the time word, match the verb.'
+  },
+
+  // ============ BOUNDARIES ============
+  {
+    n: 12, id: '4dcedc31', skill: 'bound', skillLabel: 'Boundaries', difficulty: 'hard',
+    type: 'sec',
+    passage: 'For scientists to produce new iron nanoparticles of a specific size or strength, they must first be able to monitor reactions between oxygen and existing iron nanoparticles at a near-atomic level of detail. Fortunately, chemistry <span class="blank">_______</span> and his colleagues at Temple University recently developed a new approach that does just that.',
+    question: 'Which choice completes the text so that it conforms to the conventions of Standard English?',
+    choices: [
+      { letter: 'A', text: 'professor Yugang Sun' },
+      { letter: 'B', text: 'professor Yugang Sun,' },
+      { letter: 'C', text: 'professor, Yugang Sun,' },
+      { letter: 'D', text: 'professor, Yugang Sun' }
+    ],
+    correct: 'A',
+    whyCorrect: 'No punctuation needed. "<strong>Chemistry professor Yugang Sun</strong>" is one tight phrase (title + name). Then "Yugang Sun and his colleagues" is the joint subject — no comma between them either.',
+    whyWrong: {
+      B: 'A comma between "Yugang Sun" and "and his colleagues" wrongly cuts off the joint subject.',
+      C: 'Commas around "Yugang Sun" would imply his name is optional and removable — it isn\'t.',
+      D: 'A comma between "chemistry professor" and "Yugang Sun" wrongly separates the title from the name.'
+    },
+    hack: '<strong>Title + name = no punctuation.</strong> "Chemistry professor Yugang Sun" is one unit, like "Doctor Strange" or "President Lincoln." Don\'t break it apart with commas.'
+  },
+  {
+    n: 13, id: 'a1e0c981', skill: 'bound', skillLabel: 'Boundaries', difficulty: 'easy',
+    type: 'sec',
+    passage: 'In her book <em>The Woman Warrior: Memoirs of a Girlhood Among Ghosts</em>, author Maxine Hong Kingston examines themes <span class="blank">_______</span> childhood, womanhood, and Chinese American identity by intertwining autobiography and mythology.',
+    question: 'Which choice completes the text so that it conforms to the conventions of Standard English?',
+    choices: [
+      { letter: 'A', text: 'of:' },
+      { letter: 'B', text: 'of' },
+      { letter: 'C', text: 'of—' },
+      { letter: 'D', text: 'of,' }
+    ],
+    correct: 'B',
+    whyCorrect: '"Themes of" is the start of a phrase that needs to flow into "childhood, womanhood..." No punctuation between "of" and its objects. Read it: "themes of childhood, [themes of] womanhood, [themes of] identity."',
+    whyWrong: {
+      A: 'A colon needs a complete sentence before it. "In her book...themes of" isn\'t complete.',
+      C: 'A dash also needs a complete sentence before it. Same problem.',
+      D: 'A comma after "of" awkwardly cuts off the phrase mid-thought.'
+    },
+    hack: '<strong>Don\'t break up tight phrases.</strong> If the choices add punctuation in a spot where the words naturally flow together ("themes of ___"), the answer is usually NO punctuation.'
+  },
+  {
+    n: 14, id: 'b35cefb7', skill: 'bound', skillLabel: 'Boundaries', difficulty: 'easy',
+    type: 'sec',
+    passage: 'The fine, powdery substance that covers the Moon\'s surface is called regolith. Because regolith is both readily available and high in oxygen <span class="blank">_______</span> scientists have wondered whether it could be used as a potential source of oxygen for future lunar settlements.',
+    question: 'Which choice completes the text so that it conforms to the conventions of Standard English?',
+    choices: [
+      { letter: 'A', text: 'content and' },
+      { letter: 'B', text: 'content,' },
+      { letter: 'C', text: 'content' },
+      { letter: 'D', text: 'content, and' }
+    ],
+    correct: 'B',
+    whyCorrect: 'Sentence starts with "<strong>Because</strong>..." (subordinate clause). When that finishes and the main clause begins, you need a comma.',
+    whyWrong: {
+      A: '"And" makes both clauses subordinate — the sentence ends up with no main clause at all.',
+      C: 'No punctuation = subordinate clause runs into main clause without a break.',
+      D: 'Same problem as A — adding "and" breaks the main clause structure.'
+    },
+    hack: '<strong>Subordinate clause first → comma after.</strong> If a sentence starts with "Because," "Although," "When," "If," "Since" — put a comma where the subordinate clause ends and the main clause begins.'
+  },
+  {
+    n: 15, id: 'e76e74e8', skill: 'bound', skillLabel: 'Boundaries', difficulty: 'hard',
+    type: 'sec',
+    passage: 'Over twenty years ago, in a landmark experiment in the psychology of choice, professor Sheena Iyengar set up a jam-tasting booth at a grocery store. The number of jams available for tasting <span class="blank">_______</span> some shoppers had twenty-four different options, others only six. Interestingly, the shoppers with fewer jams to choose from purchased more jam.',
+    question: 'Which choice completes the text so that it conforms to the conventions of Standard English?',
+    choices: [
+      { letter: 'A', text: 'varied:' },
+      { letter: 'B', text: 'varied,' },
+      { letter: 'C', text: 'varied, while' },
+      { letter: 'D', text: 'varied while' }
+    ],
+    correct: 'A',
+    whyCorrect: '"The number...varied" is a complete sentence. "Some shoppers had 24, others 6" explains HOW it varied. The <strong>colon</strong> properly introduces this explanation.',
+    whyWrong: {
+      B: 'A comma between two complete sentences = comma splice.',
+      C: '"While" suggests the variation happened DURING the time some had 24 options — which doesn\'t fit.',
+      D: 'Same "while" problem.'
+    },
+    hack: '<strong>Colon = explanation coming.</strong> If the first part is a complete sentence and the second part EXPLAINS or LISTS something about it, use a colon.'
+  },
+  {
+    n: 16, id: 'a9e5b788', skill: 'bound', skillLabel: 'Boundaries', difficulty: 'hard',
+    type: 'sec',
+    passage: 'In discussing Mary Shelley\'s 1818 epistolary novel <em>Frankenstein</em>, literary theorist Gayatri Spivak directs the reader\'s attention to the character of Margaret Saville. As Spivak points out, Saville is not the protagonist of Shelley\'s <span class="blank">_______</span> as the recipient of the letters that frame the book\'s narrative, she\'s the "occasion" of it.',
+    question: 'Which choice completes the text so that it conforms to the conventions of Standard English?',
+    choices: [
+      { letter: 'A', text: 'novel' },
+      { letter: 'B', text: 'novel,' },
+      { letter: 'C', text: 'novel; rather,' },
+      { letter: 'D', text: 'novel, rather,' }
+    ],
+    correct: 'C',
+    whyCorrect: 'Two complete sentences: "Saville is not the protagonist..." AND "she\'s the occasion of it." A semicolon joins them. "Rather" adds the contrast.',
+    whyWrong: {
+      A: 'No punctuation = run-on (two sentences fused).',
+      B: 'Comma alone between two sentences = comma splice.',
+      D: 'Same problem — a comma alone (even with "rather") can\'t join two complete sentences.'
+    },
+    hack: '<strong>Two complete sentences? Use semicolon, period, OR comma + conjunction.</strong> Never just a comma — that\'s a comma splice every time.'
+  },
+  {
+    n: 17, id: 'a153ad6a', skill: 'bound', skillLabel: 'Boundaries', difficulty: 'medium',
+    type: 'sec',
+    passage: 'While light is known as one of the fastest-moving substances, it slows down when passing through some types of matter. One such type of matter is a form of cooled, condensed gas called a Bose-Einstein condensate <span class="blank">_______</span> Dutch physicist Lene Hau famously used a BEC to slow a beam of light to a complete halt.',
+    question: 'Which choice completes the text so that it conforms to the conventions of Standard English?',
+    choices: [
+      { letter: 'A', text: '(BEC),' },
+      { letter: 'B', text: '(BEC) and' },
+      { letter: 'C', text: '(BEC);' },
+      { letter: 'D', text: '(BEC)' }
+    ],
+    correct: 'C',
+    whyCorrect: 'Two complete sentences: "One such type of matter is a Bose-Einstein condensate (BEC)" AND "Dutch physicist Lene Hau used a BEC to slow light." A semicolon joins them.',
+    whyWrong: {
+      A: 'Comma alone between two complete sentences = comma splice.',
+      B: '"And" without a comma between two complete sentences = run-on.',
+      D: 'No punctuation = run-on.'
+    },
+    hack: '<strong>Test the two parts: are they each complete sentences?</strong> If yes, you need semicolon, period, or comma + conjunction. Never just a comma or just "and."'
+  },
+  {
+    n: 18, id: '59a246dc', skill: 'bound', skillLabel: 'Boundaries', difficulty: 'hard',
+    type: 'sec',
+    passage: 'When external forces are applied to common glass made from silicates, energy builds up around minuscule defects in the material, resulting in fractures. Recently, engineer Erkka Frankberg of Tampere University in Finland used the chemical <span class="blank">_______</span> to make a glassy solid that can withstand higher strain than silicate glass can before fracturing.',
+    question: 'Which choice completes the text so that it conforms to the conventions of Standard English?',
+    choices: [
+      { letter: 'A', text: 'compound, aluminum oxide' },
+      { letter: 'B', text: 'compound aluminum oxide,' },
+      { letter: 'C', text: 'compound, aluminum oxide,' },
+      { letter: 'D', text: 'compound aluminum oxide' }
+    ],
+    correct: 'D',
+    whyCorrect: '"Aluminum oxide" tells you WHICH chemical compound. It\'s essential information (a <strong>restrictive appositive</strong>). Don\'t set off essential info with commas.',
+    whyWrong: {
+      A: 'A comma after "compound" suggests "aluminum oxide" is optional info. It isn\'t — without it, we don\'t know which compound.',
+      B: 'The comma after "aluminum oxide" wrongly breaks the sentence flow before "to make."',
+      C: 'Commas around "aluminum oxide" say it\'s optional. It isn\'t.'
+    },
+    hack: '<strong>Can you remove the info and still have a clear sentence?</strong> If YES — commas around it (optional). If NO — no commas (essential). "The chemical compound" alone doesn\'t say which compound, so "aluminum oxide" is essential.'
+  },
+  {
+    n: 19, id: '6fece68e', skill: 'bound', skillLabel: 'Boundaries', difficulty: 'easy',
+    type: 'sec',
+    passage: 'Emperor Ashoka ruled the Maurya Empire in South Asia from roughly 270 to 232 BCE. He is known for enforcing a moral code called the Law of Piety, which established the sanctity of animal <span class="blank">_______</span> the just treatment of the elderly, and the abolition of the slave trade.',
+    question: 'Which choice completes the text so that it conforms to the conventions of Standard English?',
+    choices: [
+      { letter: 'A', text: 'life' },
+      { letter: 'B', text: 'life;' },
+      { letter: 'C', text: 'life:' },
+      { letter: 'D', text: 'life,' }
+    ],
+    correct: 'D',
+    whyCorrect: 'Three things in a list: sanctity of animal life, just treatment of elderly, abolition of slave trade. Items in a list = separated by <strong>commas</strong>.',
+    whyWrong: {
+      A: 'No punctuation runs the items together.',
+      B: 'Semicolons in a list are only used when items themselves contain commas. Not here.',
+      C: 'Colons introduce lists — they don\'t separate items within.'
+    },
+    hack: '<strong>Lists use commas, all the way through.</strong> "A, B, and C" — commas separate. Even when items are long like here, still commas.'
+  },
+  {
+    n: 20, id: '155239cf', skill: 'bound', skillLabel: 'Boundaries', difficulty: 'easy',
+    type: 'sec',
+    passage: 'By analyzing ice cores from Greenland and Antarctica, a research team at Sweden\'s Lund University discovered evidence of a solar storm that occurred 9,200 years ago. Scientists had previously thought the Sun to be in a relatively "quiet" phase at that <span class="blank">_______</span> the Lund team\'s finding suggests otherwise.',
+    question: 'Which choice completes the text so that it conforms to the conventions of Standard English?',
+    choices: [
+      { letter: 'A', text: 'time but' },
+      { letter: 'B', text: 'time, but' },
+      { letter: 'C', text: 'time,' },
+      { letter: 'D', text: 'time' }
+    ],
+    correct: 'B',
+    whyCorrect: 'Two complete sentences. The standard join: <strong>comma + "but"</strong> (a coordinating conjunction).',
+    whyWrong: {
+      A: 'Long sentences joined with just "but" (no comma) come off as a run-on.',
+      C: 'Comma alone between two sentences = comma splice.',
+      D: 'No punctuation = run-on.'
+    },
+    hack: '<strong>Comma + FANBOYS</strong> (For, And, Nor, But, Or, Yet, So). When two complete sentences need to join, comma + one of these conjunctions does it cleanly.'
+  }
+];;
