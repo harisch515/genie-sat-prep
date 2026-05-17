@@ -272,7 +272,7 @@ const CS_QUESTIONS = [
     },
     hack: '<strong>Two-clause check.</strong> Each choice has two parts ("agreeing X but pointing out Y"). BOTH must be true. Many traps have one true clause and one false clause — verify both.'
   }
-];;
+];
 
 const EOI_QUESTIONS = [
   // ===== TRANSITIONS =====
@@ -940,410 +940,463 @@ const EOI_QUESTIONS = [
     },
     hack: '<strong>"Thoroughness" = STACK methods.</strong> The right answer accumulates ("not only... but also," "in addition to," multiple specific actions). Single-method or summary choices fail to show the breadth.'
   }
-];;
+];
 
-const SEC_QUESTIONS = [
-  // ============ FORM, STRUCTURE & SENSE ============
+const IAI_QUESTIONS = [
+  // ============ CENTRAL IDEAS & DETAILS ============
   {
-    n: 1, id: '96c720af', skill: 'form', skillLabel: 'Form, Structure & Sense', difficulty: 'easy',
-    type: 'sec',
-    passage: 'Atoms in a synchrotron, a type of circular particle accelerator, travel faster and faster until they <span class="blank">_______</span> a desired energy level, at which point they are diverted to collide with a target, smashing the atoms.',
-    question: 'Which choice completes the text so that it conforms to the conventions of Standard English?',
+    n: 1, id: 'e677fa6c', skill: 'central', skillLabel: 'Central Ideas & Details', difficulty: 'medium',
+    type: 'iai-main',
+    passage: '<em>The following text is adapted from Edgar Allan Poe\'s 1849 story "Landor\'s Cottage."</em><br><br>During a pedestrian trip last summer, through one or two of the river counties of New York, I found myself, as the day declined, somewhat embarrassed about the road I was pursuing. The land undulated very remarkably; and my path, for the last hour, had wound about and about so confusedly, in its effort to keep in the valleys, that I no longer knew in what direction lay the sweet village of B——, where I had determined to stop for the night.',
+    question: 'Which choice best states the main idea of the text?',
     choices: [
-      { letter: 'A', text: 'will reach' },
-      { letter: 'B', text: 'reach' },
-      { letter: 'C', text: 'had reached' },
-      { letter: 'D', text: 'are reaching' }
+      { letter: 'A', text: 'The narrator remembers a trip he took and admits to getting lost.' },
+      { letter: 'B', text: 'The narrator recalls fond memories of a journey that he took through some beautiful river counties.' },
+      { letter: 'C', text: 'The narrator describes what he saw during a long trip through a frequently visited location.' },
+      { letter: 'D', text: 'The narrator explains the difficulties he encountered on a trip and how he overcame them.' }
+    ],
+    correct: 'A',
+    whyCorrect: 'The narrator is "embarrassed" about the route he took — a polite way of saying he got <strong>lost</strong>. He no longer knew which direction to go. That\'s the whole point of the passage.',
+    whyWrong: {
+      B: 'Wrong feeling — he\'s "embarrassed," not fond. And he never describes the place as beautiful.',
+      C: 'No evidence he\'s visited this place before. He doesn\'t know where the village is.',
+      D: 'He never says he overcame the difficulty — the passage ends with him still lost.'
+    },
+    hack: '<strong>Main idea = what the WHOLE passage is about.</strong> Don\'t pick choices that only cover part of it, or that add details the passage never mentioned.'
+  },
+  {
+    n: 2, id: '11c68ded', skill: 'central', skillLabel: 'Central Ideas & Details', difficulty: 'medium',
+    type: 'iai-main',
+    passage: 'A contraction of "you all," the pronoun "y\'all" has long been used as a plural version of "you" in the South and in Black communities around the US. In recent decades, most other English-speaking communities in the US have begun to use "y\'all." What explains its rise in popularity? Many varieties of English have no pronoun that specifically addresses more than one person and instead must use "you" to address both one person and more than one. But "y\'all" always refers to two or more people. As a result, it conveys the speaker\'s meaning more precisely than "you" can.',
+    question: 'Which question does the text most directly attempt to answer?',
+    choices: [
+      { letter: 'A', text: 'How many other plural versions of the pronoun "you" are there in English, besides "y\'all"?' },
+      { letter: 'B', text: 'Why has the pronoun "y\'all" become more widely used in the US?' },
+      { letter: 'C', text: 'When was the first recorded use of the pronoun "y\'all" in the English language?' },
+      { letter: 'D', text: 'Is "y\'all" commonly used in English-speaking regions of the world besides the US?' }
     ],
     correct: 'B',
-    whyCorrect: 'The other verbs in the sentence are <strong>present tense</strong> ("travel," "are diverted"). Match them: "reach" (present) is the only option that fits.',
+    whyCorrect: 'The text literally asks: <em>"What explains its rise in popularity?"</em> Then it answers that question. Choice B = same question, rephrased.',
     whyWrong: {
-      A: '"Will reach" is future tense — clashes with the present tense verbs around it.',
-      C: '"Had reached" is past perfect — clashes with present tense around it.',
-      D: '"Are reaching" suggests an action <em>currently in progress</em>. The other verbs describe general behavior, not an in-progress event.'
+      A: 'Text doesn\'t list other plural pronouns.',
+      C: 'Text never gives a first recorded date.',
+      D: 'Text only discusses the US, not other English-speaking regions.'
     },
-    hack: '<strong>Match the tenses around the blank.</strong> Find the other verbs in the sentence. If they\'re present, your answer is present. If past, past. Simple as that.'
+    hack: '<strong>Look for the literal question in the text.</strong> Often it\'s right there ("What explains...?" / "Why does...?"). Find it, then pick the choice that matches.'
   },
   {
-    n: 2, id: 'e6f2dba6', skill: 'form', skillLabel: 'Form, Structure & Sense', difficulty: 'easy',
-    type: 'sec',
-    passage: 'According to the traditional RYB (red-yellow-blue) color model, yellow is a complementary color to purple. However, yellow <span class="blank">_______</span> considered complementary to blue in modern color theory.',
-    question: 'Which choice completes the text so that it conforms to the conventions of Standard English?',
+    n: 3, id: '66c47028', skill: 'central', skillLabel: 'Central Ideas & Details', difficulty: 'medium',
+    type: 'iai-main',
+    passage: 'In 1934 physicist Eugene Wigner posited the existence of a crystal consisting entirely of electrons in a honeycomb-like structure. The so-called Wigner crystal remained largely conjecture, however, until Feng Wang and colleagues announced in 2021 that they had captured an image of one. The researchers trapped electrons between two semiconductors and then cooled the apparatus, causing the electrons to settle into a crystalline structure. By inserting an ultrathin sheet of graphene above the crystal, the researchers obtained an impression — the first visual confirmation of the Wigner crystal.',
+    question: 'Which choice best states the main idea of the text?',
     choices: [
-      { letter: 'A', text: 'is' },
-      { letter: 'B', text: 'having been' },
-      { letter: 'C', text: 'to be' },
-      { letter: 'D', text: 'being' }
+      { letter: 'A', text: 'Researchers have obtained the most definitive evidence to date of the existence of the Wigner crystal.' },
+      { letter: 'B', text: 'Researchers have identified an innovative new method for working with unusual crystalline structures.' },
+      { letter: 'C', text: 'Graphene is the most important of the components required to capture an image of a Wigner crystal.' },
+      { letter: 'D', text: 'It\'s difficult to acquire an image of a Wigner crystal because of the crystal\'s honeycomb structure.' }
     ],
     correct: 'A',
-    whyCorrect: '"Is considered" supplies the main verb the sentence needs. Without "is," the sentence has no working verb at all.',
+    whyCorrect: 'The whole text is about how a theoretical crystal (Wigner crystal) was finally CONFIRMED to exist via the first image. That\'s the main point.',
     whyWrong: {
-      B: '"Having been considered" is a participle, not a working verb. Sentence has no verb → broken sentence.',
-      C: '"To be considered" is an infinitive, not a working verb. Sentence has no verb → broken sentence.',
-      D: '"Being considered" is a participle, not a working verb. Sentence has no verb → broken sentence.'
+      B: 'Too broad. Text is about ONE specific crystal, not crystalline structures in general.',
+      C: 'Graphene is mentioned but text doesn\'t say it\'s "the most important" component.',
+      D: 'Text never says the honeycomb structure is what made it hard to image.'
     },
-    hack: '<strong>Every sentence needs a real, working verb.</strong> If the choices include weird forms like "being," "to be," "having been" — those aren\'t real verbs. Pick the plain one (is, was, has, etc.).'
+    hack: '<strong>"Main idea" = the BIG point, not a detail.</strong> If a choice focuses on one specific component or sub-fact, it\'s probably not the main idea.'
   },
   {
-    n: 3, id: 'fced396a', skill: 'form', skillLabel: 'Form, Structure & Sense', difficulty: 'hard',
-    type: 'sec',
-    passage: 'The Herfindahl-Hirschman Index (HHI), a commonly used measure of competition between companies in a particular market, ranges from a score of zero to 10,000 points. Compared with that of a highly concentrated market — that is, a market controlled by very few companies — <span class="blank">_______</span>',
-    question: 'Which choice completes the text so that it conforms to the conventions of Standard English?',
+    n: 4, id: '1a2b29c9', skill: 'central', skillLabel: 'Central Ideas & Details', difficulty: 'hard',
+    type: 'iai-main',
+    passage: '<em>The following text is adapted from María Cristina Mena\'s 1914 short story "The Vine-Leaf."</em><br><br>It is a saying in the capital of Mexico that Dr. Malsufrido carries more family secrets under his hat than any archbishop. The doctor\'s hat is, appropriately enough, uncommonly capacious, rising very high, and sinking so low that it seems to be supported by his ears and eyebrows, and it has a furry look, as if it had been brushed the wrong way, which is perhaps what happens to it if it is ever brushed at all. When the doctor takes it off, the family secrets do not fly out like a flock of parrots, but remain nicely bottled up beneath a dome of old and highly polished ivory.',
+    question: 'Based on the text, how do people in the capital of Mexico most likely regard Dr. Malsufrido?',
     choices: [
-      { letter: 'A', text: 'a market that is less concentrated will have a much lower HHI score.' },
-      { letter: 'B', text: 'the HHI score of a less concentrated market will be much lower.' },
-      { letter: 'C', text: 'when a market is less concentrated, its HHI score will be much lower.' },
-      { letter: 'D', text: 'a less concentrated market will have an HHI score that is much lower.' }
+      { letter: 'A', text: 'Many have come to tolerate him despite his disheveled appearance.' },
+      { letter: 'B', text: 'Few feel concerned that he will divulge their confidences.' },
+      { letter: 'C', text: 'Some dislike how freely he discusses his own family.' },
+      { letter: 'D', text: 'Most would be unimpressed by him were it not for his professional expertise.' }
     ],
     correct: 'B',
-    whyCorrect: 'The opening says "Compared with <strong>that</strong> [the HHI score] of a highly concentrated market." What follows must be the <strong>other HHI score</strong> being compared. Only choice B starts with "the HHI score..." — direct match.',
+    whyCorrect: 'The saying compares him to an archbishop (someone famous for keeping secrets). And the secrets "remain nicely bottled up" — meaning he doesn\'t share them. People <strong>trust him to keep quiet</strong>.',
     whyWrong: {
-      A: 'Starts with "a market." But we\'re comparing HHI <strong>scores</strong>, not markets. Dangling modifier.',
-      C: 'Adds "when a market is less concentrated" — confusing and creates an ambiguous "its."',
-      D: 'Starts with "a less concentrated market." Same problem as A — we\'re comparing scores, not markets.'
+      A: 'Hat description is whimsical, not negative. He\'s not portrayed as disheveled — and there\'s no "tolerating" tone.',
+      C: 'Opposite of the text. He keeps secrets, including his own family\'s.',
+      D: 'Professional expertise isn\'t mentioned at all.'
     },
-    hack: '<strong>What follows "Compared with X" must equal X.</strong> If "Compared with [the HHI score]" opens, the next thing must be ANOTHER score. Not a market. Not a person. A score.'
+    hack: '<strong>Match the choice to the LITERAL text.</strong> The passage says secrets stay "bottled up" — meaning he keeps them. Don\'t add ideas the text doesn\'t mention.'
   },
   {
-    n: 4, id: 'd47bb0a4', skill: 'form', skillLabel: 'Form, Structure & Sense', difficulty: 'easy',
-    type: 'sec',
-    passage: 'Objects ranging from the Kikkoman soy sauce bottle to the Yamaha VMAX motorcycle to the Komachi bullet train <span class="blank">_______</span> designed by twentieth-century industrial designer Kenji Ekuan.',
-    question: 'Which choice completes the text so that it conforms to the conventions of Standard English?',
+    n: 5, id: '2fdfe002', skill: 'central', skillLabel: 'Central Ideas & Details', difficulty: 'hard',
+    type: 'iai-main',
+    passage: '<em>The following text is adapted from Countee Cullen\'s 1926 poem "Thoughts in a Zoo."</em><br><br>They in their cruel traps, and we in ours,<br>Survey each other\'s rage, and pass the hours<br>Commiserating each the other\'s woe,<br>To mitigate his own pain\'s fiery glow.<br>Man could but little proffer in exchange<br>Save that his cages have a larger range.<br>That lion with his lordly, untamed heart<br>Has in some man his human counterpart,<br>Some lofty soul in dreams and visions wrapped,<br>But in the stifling flesh securely trapped.',
+    question: 'Based on the text, what challenge do humans sometimes experience?',
     choices: [
-      { letter: 'A', text: 'was' },
-      { letter: 'B', text: 'is' },
-      { letter: 'C', text: 'has been' },
-      { letter: 'D', text: 'were' }
+      { letter: 'A', text: 'They cannot effectively tame certain wild animals because of a lack of compassion.' },
+      { letter: 'B', text: 'They cannot focus on setting attainable goals because of a lack of motivation.' },
+      { letter: 'C', text: 'They quickly become frustrated when faced with difficult tasks because of a lack of self-control.' },
+      { letter: 'D', text: 'They have aspirations that cannot be fulfilled because of certain limitations.' }
     ],
     correct: 'D',
-    whyCorrect: 'Subject is "<strong>Objects</strong>" (plural). The verb must be plural: "were."',
+    whyCorrect: 'The poem says humans are "in dreams and visions wrapped" (have aspirations) but "in the stifling flesh securely trapped" (can\'t fulfill them due to physical/mental limits). Aspirations + limitations.',
     whyWrong: {
-      A: '"Was" is singular — doesn\'t match plural "objects."',
-      B: '"Is" is singular — doesn\'t match plural "objects."',
-      C: '"Has been" is singular — doesn\'t match plural "objects."'
+      A: 'Poem doesn\'t discuss taming animals.',
+      B: 'No mention of motivation or attainable goals.',
+      C: 'No mention of self-control or frustration with tasks.'
     },
-    hack: '<strong>Find the real subject first.</strong> Don\'t get fooled by stuff between the subject and verb. The subject here is "objects" (plural), not "bottle" or "motorcycle" or "train" (singular distractions sandwiched in).'
+    hack: '<strong>Poetry traps: each wrong choice adds a CONCEPT the poem never names.</strong> Stay strict — only the idea that matches words actually in the poem.'
   },
   {
-    n: 5, id: 'e3b72630', skill: 'form', skillLabel: 'Form, Structure & Sense', difficulty: 'easy',
-    type: 'sec',
-    passage: 'In the historical novel <em>The Surrender Tree</em>, Cuban American author Margarita Engle uses poetry rather than prose <span class="blank">_______</span> the true story of Cuban folk hero Rosa La Bayamesa.',
-    question: 'Which choice completes the text so that it conforms to the conventions of Standard English?',
+    n: 6, id: '0d81b7d9', skill: 'central', skillLabel: 'Central Ideas & Details', difficulty: 'medium',
+    type: 'iai-main',
+    passage: 'Paleontologist Alan Tennyson and colleagues studied fossil bones found in New Zealand that are more than 55 million years old. The researchers determined that the fossil bones belonged to two previously unknown species of prehistoric penguins. Moreover, they estimated that one of the two penguin species was more than three times the size of the emperor penguin, which is the largest penguin species that exists today.',
+    question: 'Based on the text, which choice best describes the two previously unknown penguin species?',
     choices: [
-      { letter: 'A', text: 'tells' },
-      { letter: 'B', text: 'told' },
-      { letter: 'C', text: 'is telling' },
-      { letter: 'D', text: 'to tell' }
+      { letter: 'A', text: 'They are frequently studied by paleontologists.' },
+      { letter: 'B', text: 'They are no longer living species.' },
+      { letter: 'C', text: 'They were smaller than penguin species that exist today.' },
+      { letter: 'D', text: 'They spent little of their lives in water.' }
     ],
-    correct: 'D',
-    whyCorrect: 'Engle uses poetry <strong>in order to</strong> tell the story. "To tell" expresses the purpose. Standard infinitive construction.',
+    correct: 'B',
+    whyCorrect: 'The species are <strong>prehistoric</strong>, from fossils 55 million years old. And one was three times bigger than the LARGEST penguin alive today — meaning these species aren\'t alive anymore.',
     whyWrong: {
-      A: '"Tells" would need to be a new verb on its own — illogical here. Engle already uses poetry; "tells" doubles up.',
-      B: '"Told" makes the verb past tense — clashes with present "uses."',
-      C: '"Is telling" has the same problem as "tells" — doubled verb.'
+      A: 'They were "previously unknown" — opposite of frequently studied.',
+      C: 'Text says one was three times BIGGER than current penguins, not smaller.',
+      D: 'No mention of where they spent their lives.'
     },
-    hack: '<strong>"To + verb" = purpose / reason.</strong> When a sentence is explaining WHY something happens, the infinitive ("to tell," "to make," "to show") is usually the answer.'
-  },
-  {
-    n: 6, id: 'd2b81427', skill: 'form', skillLabel: 'Form, Structure & Sense', difficulty: 'hard',
-    type: 'sec',
-    passage: 'In assessing the films of Japanese director Akira Kurosawa, <span class="blank">_______</span> have missed his equally deep engagement with Japanese artistic traditions such as Noh theater.',
-    question: 'Which choice completes the text so that it conforms to the conventions of Standard English?',
-    choices: [
-      { letter: 'A', text: 'many critics have focused on Kurosawa\'s use of Western literary sources but' },
-      { letter: 'B', text: 'Kurosawa\'s use of Western literary sources has been the focus of many critics, who' },
-      { letter: 'C', text: 'there are many critics who have focused on Kurosawa\'s use of Western literary sources, but they' },
-      { letter: 'D', text: 'the focus of many critics has been on Kurosawa\'s use of Western literary sources; they' }
-    ],
-    correct: 'A',
-    whyCorrect: '"In assessing the films of Kurosawa" must be done by a <strong>person</strong>. Choice A puts "many critics" right after the modifier. Critics do the assessing — makes sense.',
-    whyWrong: {
-      B: 'Puts "Kurosawa\'s use of Western sources" after the modifier — implying his SOURCES did the assessing. Nonsense.',
-      C: 'Puts "there" after the modifier — "there" can\'t assess anything.',
-      D: 'Puts "the focus" after the modifier — focuses can\'t assess films.'
-    },
-    hack: '<strong>Who/what is doing the action in the opening phrase?</strong> Whatever comes right after the comma must be THAT person/thing. "In assessing films" — a person assesses, so a person noun must follow.'
-  },
-  {
-    n: 7, id: '512f0ac9', skill: 'form', skillLabel: 'Form, Structure & Sense', difficulty: 'hard',
-    type: 'sec',
-    passage: 'Working from an earlier discovery of Charpentier\'s, chemists Emmanuelle Charpentier and Jennifer Doudna — winners of the 2020 Nobel Prize in Chemistry — re-created and then reprogrammed the so-called "genetic scissors" of a species of DNA-cleaving bacteria <span class="blank">_______</span> a tool that is revolutionizing the field of gene technology.',
-    question: 'Which choice completes the text so that it conforms to the conventions of Standard English?',
-    choices: [
-      { letter: 'A', text: 'to forge' },
-      { letter: 'B', text: 'forging' },
-      { letter: 'C', text: 'forged' },
-      { letter: 'D', text: 'and forging' }
-    ],
-    correct: 'A',
-    whyCorrect: 'The chemists re-created the scissors <strong>in order to</strong> forge a tool. "To forge" expresses the purpose.',
-    whyWrong: {
-      B: 'Without a comma, "forging" attaches to the nearest noun ("bacteria") — implying the BACTERIA are forging. Illogical.',
-      C: '"Forged" would need an "and" before it to be parallel to the other past-tense verbs. Without it, the sentence breaks.',
-      D: '"Forging" is present progressive — clashes with the past-tense verbs ("re-created," "reprogrammed").'
-    },
-    hack: '<strong>"To + verb" = the WHY.</strong> Same rule as before. Chemists did X "to forge" a tool. The infinitive explains the reason.'
-  },
-  {
-    n: 8, id: '20ea68b7', skill: 'form', skillLabel: 'Form, Structure & Sense', difficulty: 'medium',
-    type: 'sec',
-    passage: 'It can take time for proposed amendments to the US Constitution to become law. For example, the Twenty-Second Amendment, which limits the number of <span class="blank">_______</span> can serve, was first proposed in 1947 but wasn\'t approved by the required three-fourths majority of state legislatures until 1951.',
-    question: 'Which choice completes the text so that it conforms to the conventions of Standard English?',
-    choices: [
-      { letter: 'A', text: 'terms presidents' },
-      { letter: 'B', text: 'term\'s presidents' },
-      { letter: 'C', text: 'term\'s president\'s' },
-      { letter: 'D', text: 'terms president\'s' }
-    ],
-    correct: 'A',
-    whyCorrect: 'The amendment limits the number of <strong>terms</strong> that <strong>presidents</strong> can serve. Both plural. No possession involved.',
-    whyWrong: {
-      B: '"Term\'s" = singular possessive (one term\'s something). Wrong — we mean multiple terms.',
-      C: 'Both possessives. Wrong on both counts — no ownership here.',
-      D: '"President\'s" = singular possessive. Wrong — applies to presidents in general.'
-    },
-    hack: '<strong>Apostrophe = possession.</strong> If the noun isn\'t OWNING something, no apostrophe. Read it: "number of terms presidents can serve" — terms aren\'t owning anything, presidents aren\'t owning anything. Just plurals.'
-  },
-  {
-    n: 9, id: 'eeb14722', skill: 'form', skillLabel: 'Form, Structure & Sense', difficulty: 'medium',
-    type: 'sec',
-    passage: 'The soundtrack to Mira Nair\'s 1991 film <em>Mississippi Masala</em> expressively captures the clashing of cultures that happens when <span class="blank">_______</span> (a young Indian woman from Uganda and a young African American man from Mississippi) meet.',
-    question: 'Which choice completes the text so that it conforms to the conventions of Standard English?',
-    choices: [
-      { letter: 'A', text: 'it\'s two protagonists' },
-      { letter: 'B', text: 'its two protagonist\'s' },
-      { letter: 'C', text: 'it\'s two protagonist\'s' },
-      { letter: 'D', text: 'its two protagonists' }
-    ],
-    correct: 'D',
-    whyCorrect: '"<strong>Its</strong>" = possessive (the film\'s protagonists). "<strong>Protagonists</strong>" = plural (there are two). Both correct.',
-    whyWrong: {
-      A: '"It\'s" means "it is" (contraction), not "belonging to it."',
-      B: '"Protagonist\'s" = singular possessive. But the sentence says there are <em>two</em> protagonists.',
-      C: 'Both errors — wrong "it\'s" AND wrong "protagonist\'s."'
-    },
-    hack: '<strong>"It\'s" = "it is." "Its" = belongs to it.</strong> Try replacing "it\'s" with "it is" in the sentence — if it doesn\'t make sense, use "its."'
-  },
-  {
-    n: 10, id: 'dc645172', skill: 'form', skillLabel: 'Form, Structure & Sense', difficulty: 'hard',
-    type: 'sec',
-    passage: 'The artistic talents of Barbara Chase-Riboud, most known for her 1979 historical novel <em>Sally Hemings</em> and the conversation it inspired, <span class="blank">_______</span> limited to the realm of prose: she first excelled in sculpture, where her affinity for bronze — a material she described as "timeless" due to its use across eras and cultures — became part of her artistic identity.',
-    question: 'Which choice completes the text so that it conforms to the conventions of Standard English?',
-    choices: [
-      { letter: 'A', text: 'hasn\'t been' },
-      { letter: 'B', text: 'wasn\'t' },
-      { letter: 'C', text: 'isn\'t' },
-      { letter: 'D', text: 'aren\'t' }
-    ],
-    correct: 'D',
-    whyCorrect: 'Subject is "<strong>talents</strong>" (plural). Verb must be plural: "aren\'t."',
-    whyWrong: {
-      A: '"Hasn\'t been" is singular.',
-      B: '"Wasn\'t" is singular.',
-      C: '"Isn\'t" is singular.'
-    },
-    hack: '<strong>Cross out everything between the subject and verb.</strong> "The artistic talents [of Barbara Chase-Riboud, most known for her 1979 novel...] aren\'t limited." Ignore the middle. Subject = "talents" (plural). Verb = plural.'
-  },
-  {
-    n: 11, id: '57998dd3', skill: 'form', skillLabel: 'Form, Structure & Sense', difficulty: 'easy',
-    type: 'sec',
-    passage: 'Obsidian is a kind of volcanic glass formed when lava cools so quickly that the atoms inside it cannot arrange themselves in a crystalline structure. You <span class="blank">_______</span> more about obsidian\'s structure, which is classified as amorphous, in a later chapter.',
-    question: 'Which choice completes the text so that it conforms to the conventions of Standard English?',
-    choices: [
-      { letter: 'A', text: 'had learned' },
-      { letter: 'B', text: 'had been learning' },
-      { letter: 'C', text: 'will learn' },
-      { letter: 'D', text: 'have learned' }
-    ],
-    correct: 'C',
-    whyCorrect: '"In a later chapter" = the future. Verb must be future tense: "will learn."',
-    whyWrong: {
-      A: '"Had learned" = past perfect (something completed in the past). Wrong direction.',
-      B: '"Had been learning" = past — wrong direction.',
-      D: '"Have learned" = present perfect (already done). But the reader hasn\'t learned it yet — it\'s coming up.'
-    },
-    hack: '<strong>Time markers tell you the tense.</strong> "In a later chapter" = future. "Yesterday" = past. "Currently" = present. Find the time word, match the verb.'
+    hack: '<strong>Use only what the text says directly.</strong> "Prehistoric" + "55 million years ago" = extinct. The clue is right there.'
   },
 
-  // ============ BOUNDARIES ============
+  // ============ COMMAND OF EVIDENCE ============
   {
-    n: 12, id: '4dcedc31', skill: 'bound', skillLabel: 'Boundaries', difficulty: 'hard',
-    type: 'sec',
-    passage: 'For scientists to produce new iron nanoparticles of a specific size or strength, they must first be able to monitor reactions between oxygen and existing iron nanoparticles at a near-atomic level of detail. Fortunately, chemistry <span class="blank">_______</span> and his colleagues at Temple University recently developed a new approach that does just that.',
-    question: 'Which choice completes the text so that it conforms to the conventions of Standard English?',
-    choices: [
-      { letter: 'A', text: 'professor Yugang Sun' },
-      { letter: 'B', text: 'professor Yugang Sun,' },
-      { letter: 'C', text: 'professor, Yugang Sun,' },
-      { letter: 'D', text: 'professor, Yugang Sun' }
-    ],
-    correct: 'A',
-    whyCorrect: 'No punctuation needed. "<strong>Chemistry professor Yugang Sun</strong>" is one tight phrase (title + name). Then "Yugang Sun and his colleagues" is the joint subject — no comma between them either.',
-    whyWrong: {
-      B: 'A comma between "Yugang Sun" and "and his colleagues" wrongly cuts off the joint subject.',
-      C: 'Commas around "Yugang Sun" would imply his name is optional and removable — it isn\'t.',
-      D: 'A comma between "chemistry professor" and "Yugang Sun" wrongly separates the title from the name.'
+    n: 7, id: 'd83c3d54', skill: 'evidence', skillLabel: 'Command of Evidence', difficulty: 'medium',
+    type: 'iai-quant',
+    passage: 'The Jordanelle Dam was built on the Provo River in Utah in 1992. Earth scientist Adriana E. Martinez and colleagues tracked changes to the environment on the banks of the river downstream of the dam, including how much grass and forest cover were present. They concluded that the dam changed the flow of the river in ways that <strong>benefited grass plants but didn\'t benefit trees.</strong>',
+    chart: {
+      title: 'Characteristics of the Banks of the Provo River Downstream of the Jordanelle Dam',
+      ylabel: 'Area (square meters)',
+      xlabel: 'Year',
+      groups: ['1987', '1993', '2006'],
+      series: [
+        { name: 'grass cover', color: '#5a8a3a', values: [58000, 90000, 130000] },
+        { name: 'bare soil', color: '#b8965a', values: [70000, 50000, 45000] },
+        { name: 'forest cover', color: '#2a6b3a', values: [75000, 65000, 60000] }
+      ]
     },
-    hack: '<strong>Title + name = no punctuation.</strong> "Chemistry professor Yugang Sun" is one unit, like "Doctor Strange" or "President Lincoln." Don\'t break it apart with commas.'
-  },
-  {
-    n: 13, id: 'a1e0c981', skill: 'bound', skillLabel: 'Boundaries', difficulty: 'easy',
-    type: 'sec',
-    passage: 'In her book <em>The Woman Warrior: Memoirs of a Girlhood Among Ghosts</em>, author Maxine Hong Kingston examines themes <span class="blank">_______</span> childhood, womanhood, and Chinese American identity by intertwining autobiography and mythology.',
-    question: 'Which choice completes the text so that it conforms to the conventions of Standard English?',
+    question: 'Which choice best describes data from the graph that support Martinez and colleagues\' conclusion?',
     choices: [
-      { letter: 'A', text: 'of:' },
-      { letter: 'B', text: 'of' },
-      { letter: 'C', text: 'of—' },
-      { letter: 'D', text: 'of,' }
-    ],
-    correct: 'B',
-    whyCorrect: '"Themes of" is the start of a phrase that needs to flow into "childhood, womanhood..." No punctuation between "of" and its objects. Read it: "themes of childhood, [themes of] womanhood, [themes of] identity."',
-    whyWrong: {
-      A: 'A colon needs a complete sentence before it. "In her book...themes of" isn\'t complete.',
-      C: 'A dash also needs a complete sentence before it. Same problem.',
-      D: 'A comma after "of" awkwardly cuts off the phrase mid-thought.'
-    },
-    hack: '<strong>Don\'t break up tight phrases.</strong> If the choices add punctuation in a spot where the words naturally flow together ("themes of ___"), the answer is usually NO punctuation.'
-  },
-  {
-    n: 14, id: 'b35cefb7', skill: 'bound', skillLabel: 'Boundaries', difficulty: 'easy',
-    type: 'sec',
-    passage: 'The fine, powdery substance that covers the Moon\'s surface is called regolith. Because regolith is both readily available and high in oxygen <span class="blank">_______</span> scientists have wondered whether it could be used as a potential source of oxygen for future lunar settlements.',
-    question: 'Which choice completes the text so that it conforms to the conventions of Standard English?',
-    choices: [
-      { letter: 'A', text: 'content and' },
-      { letter: 'B', text: 'content,' },
-      { letter: 'C', text: 'content' },
-      { letter: 'D', text: 'content, and' }
-    ],
-    correct: 'B',
-    whyCorrect: 'Sentence starts with "<strong>Because</strong>..." (subordinate clause). When that finishes and the main clause begins, you need a comma.',
-    whyWrong: {
-      A: '"And" makes both clauses subordinate — the sentence ends up with no main clause at all.',
-      C: 'No punctuation = subordinate clause runs into main clause without a break.',
-      D: 'Same problem as A — adding "and" breaks the main clause structure.'
-    },
-    hack: '<strong>Subordinate clause first → comma after.</strong> If a sentence starts with "Because," "Although," "When," "If," "Since" — put a comma where the subordinate clause ends and the main clause begins.'
-  },
-  {
-    n: 15, id: 'e76e74e8', skill: 'bound', skillLabel: 'Boundaries', difficulty: 'hard',
-    type: 'sec',
-    passage: 'Over twenty years ago, in a landmark experiment in the psychology of choice, professor Sheena Iyengar set up a jam-tasting booth at a grocery store. The number of jams available for tasting <span class="blank">_______</span> some shoppers had twenty-four different options, others only six. Interestingly, the shoppers with fewer jams to choose from purchased more jam.',
-    question: 'Which choice completes the text so that it conforms to the conventions of Standard English?',
-    choices: [
-      { letter: 'A', text: 'varied:' },
-      { letter: 'B', text: 'varied,' },
-      { letter: 'C', text: 'varied, while' },
-      { letter: 'D', text: 'varied while' }
-    ],
-    correct: 'A',
-    whyCorrect: '"The number...varied" is a complete sentence. "Some shoppers had 24, others 6" explains HOW it varied. The <strong>colon</strong> properly introduces this explanation.',
-    whyWrong: {
-      B: 'A comma between two complete sentences = comma splice.',
-      C: '"While" suggests the variation happened DURING the time some had 24 options — which doesn\'t fit.',
-      D: 'Same "while" problem.'
-    },
-    hack: '<strong>Colon = explanation coming.</strong> If the first part is a complete sentence and the second part EXPLAINS or LISTS something about it, use a colon.'
-  },
-  {
-    n: 16, id: 'a9e5b788', skill: 'bound', skillLabel: 'Boundaries', difficulty: 'hard',
-    type: 'sec',
-    passage: 'In discussing Mary Shelley\'s 1818 epistolary novel <em>Frankenstein</em>, literary theorist Gayatri Spivak directs the reader\'s attention to the character of Margaret Saville. As Spivak points out, Saville is not the protagonist of Shelley\'s <span class="blank">_______</span> as the recipient of the letters that frame the book\'s narrative, she\'s the "occasion" of it.',
-    question: 'Which choice completes the text so that it conforms to the conventions of Standard English?',
-    choices: [
-      { letter: 'A', text: 'novel' },
-      { letter: 'B', text: 'novel,' },
-      { letter: 'C', text: 'novel; rather,' },
-      { letter: 'D', text: 'novel, rather,' }
-    ],
-    correct: 'C',
-    whyCorrect: 'Two complete sentences: "Saville is not the protagonist..." AND "she\'s the occasion of it." A semicolon joins them. "Rather" adds the contrast.',
-    whyWrong: {
-      A: 'No punctuation = run-on (two sentences fused).',
-      B: 'Comma alone between two sentences = comma splice.',
-      D: 'Same problem — a comma alone (even with "rather") can\'t join two complete sentences.'
-    },
-    hack: '<strong>Two complete sentences? Use semicolon, period, OR comma + conjunction.</strong> Never just a comma — that\'s a comma splice every time.'
-  },
-  {
-    n: 17, id: 'a153ad6a', skill: 'bound', skillLabel: 'Boundaries', difficulty: 'medium',
-    type: 'sec',
-    passage: 'While light is known as one of the fastest-moving substances, it slows down when passing through some types of matter. One such type of matter is a form of cooled, condensed gas called a Bose-Einstein condensate <span class="blank">_______</span> Dutch physicist Lene Hau famously used a BEC to slow a beam of light to a complete halt.',
-    question: 'Which choice completes the text so that it conforms to the conventions of Standard English?',
-    choices: [
-      { letter: 'A', text: '(BEC),' },
-      { letter: 'B', text: '(BEC) and' },
-      { letter: 'C', text: '(BEC);' },
-      { letter: 'D', text: '(BEC)' }
-    ],
-    correct: 'C',
-    whyCorrect: 'Two complete sentences: "One such type of matter is a Bose-Einstein condensate (BEC)" AND "Dutch physicist Lene Hau used a BEC to slow light." A semicolon joins them.',
-    whyWrong: {
-      A: 'Comma alone between two complete sentences = comma splice.',
-      B: '"And" without a comma between two complete sentences = run-on.',
-      D: 'No punctuation = run-on.'
-    },
-    hack: '<strong>Test the two parts: are they each complete sentences?</strong> If yes, you need semicolon, period, or comma + conjunction. Never just a comma or just "and."'
-  },
-  {
-    n: 18, id: '59a246dc', skill: 'bound', skillLabel: 'Boundaries', difficulty: 'hard',
-    type: 'sec',
-    passage: 'When external forces are applied to common glass made from silicates, energy builds up around minuscule defects in the material, resulting in fractures. Recently, engineer Erkka Frankberg of Tampere University in Finland used the chemical <span class="blank">_______</span> to make a glassy solid that can withstand higher strain than silicate glass can before fracturing.',
-    question: 'Which choice completes the text so that it conforms to the conventions of Standard English?',
-    choices: [
-      { letter: 'A', text: 'compound, aluminum oxide' },
-      { letter: 'B', text: 'compound aluminum oxide,' },
-      { letter: 'C', text: 'compound, aluminum oxide,' },
-      { letter: 'D', text: 'compound aluminum oxide' }
+      { letter: 'A', text: 'The lowest amount of grass cover was approximately 58,000 square meters, and the highest amount of forest cover was approximately 75,000 square meters.' },
+      { letter: 'B', text: 'There was more grass cover than forest cover in 1987, and this difference increased dramatically in 1993 and again in 2006.' },
+      { letter: 'C', text: 'There was less grass cover than bare soil in 1987 but more grass cover than bare soil in 1993 and 2006, whereas there was more forest cover than bare soil in all three years.' },
+      { letter: 'D', text: 'Grass cover increased from 1987 to 1993 and from 1993 to 2006, whereas forest cover decreased in those periods.' }
     ],
     correct: 'D',
-    whyCorrect: '"Aluminum oxide" tells you WHICH chemical compound. It\'s essential information (a <strong>restrictive appositive</strong>). Don\'t set off essential info with commas.',
+    whyCorrect: 'The claim: dam <strong>helped grass, hurt trees.</strong> Choice D shows exactly that — grass up, forest down, over both periods. Direct support.',
     whyWrong: {
-      A: 'A comma after "compound" suggests "aluminum oxide" is optional info. It isn\'t — without it, we don\'t know which compound.',
-      B: 'The comma after "aluminum oxide" wrongly breaks the sentence flow before "to make."',
-      C: 'Commas around "aluminum oxide" say it\'s optional. It isn\'t.'
+      A: 'Both data points are from 1987 — BEFORE the dam was built in 1992. Can\'t support a conclusion about what the dam did.',
+      B: 'Factually wrong — in 1987 there was MORE forest cover than grass cover, not less.',
+      C: 'The comparisons to bare soil don\'t prove the dam helped grass or hurt trees. Tangential data.'
     },
-    hack: '<strong>Can you remove the info and still have a clear sentence?</strong> If YES — commas around it (optional). If NO — no commas (essential). "The chemical compound" alone doesn\'t say which compound, so "aluminum oxide" is essential.'
+    hack: '<strong>Match the data to the EXACT claim.</strong> Claim says grass helped + trees hurt. Look for grass UP and forest DOWN. Skip anything else.'
   },
   {
-    n: 19, id: '6fece68e', skill: 'bound', skillLabel: 'Boundaries', difficulty: 'easy',
-    type: 'sec',
-    passage: 'Emperor Ashoka ruled the Maurya Empire in South Asia from roughly 270 to 232 BCE. He is known for enforcing a moral code called the Law of Piety, which established the sanctity of animal <span class="blank">_______</span> the just treatment of the elderly, and the abolition of the slave trade.',
-    question: 'Which choice completes the text so that it conforms to the conventions of Standard English?',
+    n: 8, id: '98d0a5d7', skill: 'evidence', skillLabel: 'Command of Evidence', difficulty: 'hard',
+    type: 'iai-text',
+    passage: 'Almost all works of fiction contain references to the progression of time, including the time of day when events in a story take place. In a 2020 study, Allen Kim, Charuta Pethe, and Steven Skiena claim that <strong>an observable pattern in such references reflects a shift in human behavior prompted by the spread of electric lighting in the late nineteenth century.</strong> The researchers drew this conclusion from an analysis of more than 50,000 novels spanning many centuries and cultures, using software to recognize and tally both specific time references — that is, clock phrases, such as 7 a.m. or 2:30 p.m. — and implied ones, such as mentions of meals typically associated with a particular time of day.',
+    question: 'Which finding from the study, if true, would most directly support the researchers\' conclusion?',
     choices: [
-      { letter: 'A', text: 'life' },
-      { letter: 'B', text: 'life;' },
-      { letter: 'C', text: 'life:' },
-      { letter: 'D', text: 'life,' }
-    ],
-    correct: 'D',
-    whyCorrect: 'Three things in a list: sanctity of animal life, just treatment of elderly, abolition of slave trade. Items in a list = separated by <strong>commas</strong>.',
-    whyWrong: {
-      A: 'No punctuation runs the items together.',
-      B: 'Semicolons in a list are only used when items themselves contain commas. Not here.',
-      C: 'Colons introduce lists — they don\'t separate items within.'
-    },
-    hack: '<strong>Lists use commas, all the way through.</strong> "A, B, and C" — commas separate. Even when items are long like here, still commas.'
-  },
-  {
-    n: 20, id: '155239cf', skill: 'bound', skillLabel: 'Boundaries', difficulty: 'easy',
-    type: 'sec',
-    passage: 'By analyzing ice cores from Greenland and Antarctica, a research team at Sweden\'s Lund University discovered evidence of a solar storm that occurred 9,200 years ago. Scientists had previously thought the Sun to be in a relatively "quiet" phase at that <span class="blank">_______</span> the Lund team\'s finding suggests otherwise.',
-    question: 'Which choice completes the text so that it conforms to the conventions of Standard English?',
-    choices: [
-      { letter: 'A', text: 'time but' },
-      { letter: 'B', text: 'time, but' },
-      { letter: 'C', text: 'time,' },
-      { letter: 'D', text: 'time' }
+      { letter: 'A', text: 'Novels published after the year 1800 include the clock phrase 10 a.m. less often than novels published before the year 1800 do.' },
+      { letter: 'B', text: 'Novels published after 1880 contain significantly more references to activities occurring after 10 p.m. than do novels from earlier periods.' },
+      { letter: 'C', text: 'Among novels published in the nineteenth century, implied time references become steadily more common than clock phrases as publication dates approach 1900.' },
+      { letter: 'D', text: 'The time references of noon (12 p.m.) and midnight (12 a.m.) are used with roughly the same frequency in the novels.' }
     ],
     correct: 'B',
-    whyCorrect: 'Two complete sentences. The standard join: <strong>comma + "but"</strong> (a coordinating conjunction).',
+    whyCorrect: 'The claim: electric lighting (late 1800s) changed human behavior. If novels after 1880 mention more <strong>late-night activities</strong> than older ones, that\'s exactly the behavior shift you\'d expect from people having light at night. Direct match.',
     whyWrong: {
-      A: 'Long sentences joined with just "but" (no comma) come off as a run-on.',
-      C: 'Comma alone between two sentences = comma splice.',
-      D: 'No punctuation = run-on.'
+      A: '10 a.m. is morning (daylight). Electric lighting wouldn\'t change morning behavior.',
+      C: 'About phrasing style, not behavior change. Off-topic.',
+      D: 'Equal frequency = NO change. Contradicts the claim.'
     },
-    hack: '<strong>Comma + FANBOYS</strong> (For, And, Nor, But, Or, Yet, So). When two complete sentences need to join, comma + one of these conjunctions does it cleanly.'
+    hack: '<strong>Find the claim\'s key word, then match data to it.</strong> Claim says lighting changed behavior. Behavior = activities. Lighting affects night. So look for: "more night activities after lighting existed." That\'s B.'
+  },
+  {
+    n: 9, id: '3091f805', skill: 'evidence', skillLabel: 'Command of Evidence', difficulty: 'easy',
+    type: 'iai-text',
+    passage: 'Ochre sea stars live in tidal pools along the shoreline of the Pacific Ocean. At night, they move to higher shore levels in search of prey. But scientists Corey Garza and Carlos Robles noticed that ochre sea stars stayed at lower levels at night after heavy rains. Garza and Robles <strong>hypothesized that a layer of fresh water formed by rainfall was a barrier to the sea stars.</strong> To test their hypothesis, the scientists did an experiment. They placed some sea stars in a climbable tank of seawater and other sea stars in a similar tank of seawater with a layer of fresh water on top. Then, the scientists watched the sea stars\' behavior at night.',
+    question: 'Which finding from the experiment, if true, would most directly support Garza and Robles\'s hypothesis?',
+    choices: [
+      { letter: 'A', text: 'None of the sea stars climbed to the tops of the tanks, but sea stars in the tank with only seawater moved around the bottom of the tank more than sea stars in the other tank did.' },
+      { letter: 'B', text: 'Sea stars in the tank with only seawater climbed to the top of the tank, but sea stars in the other tank stopped climbing just below the layer of fresh water.' },
+      { letter: 'C', text: 'Both groups of sea stars climbed to the tops of the tanks, but sea stars in the tank with only seawater climbed more slowly than sea stars in the other tank did.' },
+      { letter: 'D', text: 'Sea stars in the tank with only seawater mostly stayed near the bottom of the tank, but sea stars in the other tank climbed into the layer of fresh water.' }
+    ],
+    correct: 'B',
+    whyCorrect: 'Hypothesis: fresh water = barrier. Choice B shows seawater-only stars climbed normally, but the others STOPPED at the fresh water. The fresh water acted as a barrier. Direct support.',
+    whyWrong: {
+      A: 'Neither group climbed. Tells you nothing about fresh water as a barrier.',
+      C: 'Both groups climbed to the top — fresh water wasn\'t a barrier. Contradicts.',
+      D: 'Other group climbed INTO the fresh water. Wasn\'t a barrier. Contradicts.'
+    },
+    hack: '<strong>Find the result that shows the hypothesis is TRUE.</strong> Hypothesis = "fresh water blocks them." Look for: "they stopped at the fresh water." Don\'t pick anything where they crossed it.'
+  },
+  {
+    n: 10, id: '94c54577', skill: 'evidence', skillLabel: 'Command of Evidence', difficulty: 'hard',
+    type: 'iai-text',
+    passage: 'While attending school in New York City in the 1980s, Okwui Enwezor encountered few works by African artists in exhibitions, despite New York\'s reputation as one of the best places to view contemporary art from around the world. According to an arts journalist, later in his career as a renowned curator and art historian, <strong>Enwezor sought to remedy this deficiency, not by focusing solely on modern African artists, but by showing how their work fits into the larger context of global modern art and art history.</strong>',
+    question: 'Which finding, if true, would most directly support the journalist\'s claim?',
+    choices: [
+      { letter: 'A', text: 'Enwezor organized a retrospective of Ghanaian sculptor El Anatsui\'s work entitled El Anatsui: Triumphant Scale, one of the largest art exhibitions devoted to a Black artist in Europe\'s history.' },
+      { letter: 'B', text: 'In the exhibition Postwar: Art Between the Pacific and the Atlantic, 1945–1965, Enwezor and cocurator Katy Siegel brought works by African artists such as Malangatana Ngwenya together with pieces by major figures from other countries, like US artist Andy Warhol and Mexico\'s David Siqueiros.' },
+      { letter: 'C', text: 'Enwezor\'s 2001 exhibition The Short Century showed how African movements for independence from European colonial powers profoundly influenced work by African artists of the period.' },
+      { letter: 'D', text: 'Enwezor organized the exhibition In/sight: African Photographers, 1940 to the Present to demonstrate the broad range of ways in which African artists have approached the medium of photography.' }
+    ],
+    correct: 'B',
+    whyCorrect: 'Claim: showed African artists <strong>alongside global modern art.</strong> Choice B: an exhibition with African artists + Andy Warhol (US) + Siqueiros (Mexico). Exactly the "global context" the claim describes.',
+    whyWrong: {
+      A: 'Solo retrospective of ONE African artist. The claim was "not solely on African artists."',
+      C: 'Showed African artists in POLITICAL context, not global ARTISTIC context.',
+      D: 'Showed African artists alone (photography exhibition). No global integration.'
+    },
+    hack: '<strong>Match the EXACT claim wording.</strong> The claim said "global context of modern art." Only B shows African + global artists together. The others only show African artists.'
+  },
+  {
+    n: 11, id: '60c6b64d', skill: 'evidence', skillLabel: 'Command of Evidence', difficulty: 'medium',
+    type: 'iai-text',
+    passage: 'Male túngara frogs make complex calls to attract mates, but their calls also attract frog-biting midges, insects that feed on the frogs\' blood. Researchers Ximena Bernal and Priyanka de Silva wondered if the calls alone are sufficient for midges to locate the frogs or if midges use carbon dioxide emitted by frogs as an additional cue to their prey\'s whereabouts, like mosquitoes do. In an experiment, the researchers placed two midge traps in a túngara frog breeding area. One trap played recordings of túngara frog calls and the other released carbon dioxide along with playing the calls. <strong>Bernal and de Silva concluded that carbon dioxide does not serve as an additional cue to frog-biting midges.</strong>',
+    question: 'Which finding from the experiment, if true, would most directly support Bernal and de Silva\'s conclusion?',
+    choices: [
+      { letter: 'A', text: 'Only a small number of midges were found in the traps, though the majority were found in the trap that played calls and released carbon dioxide.' },
+      { letter: 'B', text: 'Midges entered the trap that released carbon dioxide and played calls only during or immediately after periods of carbon dioxide release.' },
+      { letter: 'C', text: 'More midges were found in the trap that only played calls than in the trap that played calls and released carbon dioxide.' },
+      { letter: 'D', text: 'The trap that released carbon dioxide and played calls attracted few midges when carbon dioxide concentrations were low but attracted many midges when carbon dioxide concentrations were high.' }
+    ],
+    correct: 'C',
+    whyCorrect: 'Conclusion: CO₂ does NOT help midges find frogs. If the calls-only trap got MORE midges than calls+CO₂, then CO₂ definitely isn\'t helping (it might even be hurting). Calls alone are enough.',
+    whyWrong: {
+      A: 'Most midges in the CO₂ trap → CO₂ IS attracting them. Contradicts the conclusion.',
+      B: 'Midges came only when CO₂ was being released → CO₂ IS the cue. Contradicts.',
+      D: 'More midges when CO₂ was higher → CO₂ IS attracting them. Contradicts.'
+    },
+    hack: '<strong>"Does NOT" claims need data showing the thing doesn\'t matter.</strong> If conclusion says X doesn\'t help, pick the result where X didn\'t make a difference — or made things worse.'
+  },
+  {
+    n: 12, id: '1f3be847', skill: 'evidence', skillLabel: 'Command of Evidence', difficulty: 'medium',
+    type: 'iai-text',
+    passage: '"Loon Point" is a 1912 poem by Amy Lowell. In the poem, which presents a nighttime scene on a body of water, <strong>Lowell describes an element of nature as an active participant in the experience</strong>, writing, ______',
+    question: 'Which quotation from "Loon Point" most effectively illustrates the claim?',
+    choices: [
+      { letter: 'A', text: '"Through the water the moon writes her legends / In light, on the smooth, wet sand."' },
+      { letter: 'B', text: '"Softly the water ripples / Against the canoe\'s curving side."' },
+      { letter: 'C', text: '"Or like the snow-white petals / Which drop from an overblown rose."' },
+      { letter: 'D', text: '"But the moon in her wayward beauty / Is ever and always the same."' }
+    ],
+    correct: 'A',
+    whyCorrect: 'Claim: nature as an <strong>active participant.</strong> Choice A: the moon "writes her legends" — that\'s a human-like ACTIVE action. The moon is doing something, not just being.',
+    whyWrong: {
+      B: 'Water ripples — passive. That\'s just what water does, not "actively participating."',
+      C: 'About petals/roses — not a nighttime water scene.',
+      D: 'The moon is described as "ever and always the same" — static, not active.'
+    },
+    hack: '<strong>Active = doing something human-like.</strong> Look for verbs that suggest agency: "writes," "speaks," "watches." Passive verbs like "ripples," "is," "drops" don\'t count.'
+  },
+
+  // ============ INFERENCES ============
+  {
+    n: 13, id: 'f9bd4e61', skill: 'inferences', skillLabel: 'Inferences', difficulty: 'hard',
+    type: 'iai-inf',
+    passage: 'German theater practitioner Bertolt Brecht (1898–1956) believed that theater should elicit an intellectual rather than an emotional response from audiences, provoking them to consider social and political realities that extend beyond the characters and events depicted onstage. Brecht\'s influence can be seen in English playwright Caryl Churchill\'s 1979 play <em>Cloud 9</em>: although the play sometimes invites empathetic reactions, it primarily works to engage audiences in an interrogation of patriarchy and colonialism, which it does by placing audiences at a distance, thereby encouraging them to <span class="blank">_______</span>',
+    question: 'Which choice most logically completes the text?',
+    choices: [
+      { letter: 'A', text: 'focus on the characters\' beliefs about social and political issues as revealed by the characters\' actions.' },
+      { letter: 'B', text: 'reflect on social and political phenomena not directly related to patriarchy and colonialism.' },
+      { letter: 'C', text: 'recognize pertinent social and political parallels between Germany during Brecht\'s time and England at the time when Churchill was writing Cloud 9.' },
+      { letter: 'D', text: 'be dispassionate as they think critically about the social and political questions raised by the play.' }
+    ],
+    correct: 'D',
+    whyCorrect: 'Brecht\'s whole philosophy = <strong>intellectual, not emotional</strong>. Churchill follows it by putting audiences "at a distance." Distance + intellectual = "dispassionate critical thinking." Direct match.',
+    whyWrong: {
+      A: '"Focus on characters\' beliefs" is the OPPOSITE — Brecht wanted attention BEYOND the characters.',
+      B: 'But the play IS about patriarchy and colonialism. Reflecting on unrelated stuff contradicts.',
+      C: 'No mention of Germany during Brecht\'s time vs England — fabricated parallel.'
+    },
+    hack: '<strong>The blank must connect back to the SETUP.</strong> Setup said: intellectual, not emotional. Distance from characters. Match those exact ideas. "Dispassionate" = unemotional. Match.'
+  },
+  {
+    n: 14, id: '4889580c', skill: 'inferences', skillLabel: 'Inferences', difficulty: 'hard',
+    type: 'iai-inf',
+    passage: 'Archaeologists and historians used to believe that the Maya civilization during its Classic period (roughly 250–900) lacked agricultural marketplaces. One reason for this belief was that these scholars misunderstood the ecology of the regions the Maya inhabited. Marketplaces typically emerge because different individuals or groups want to trade resources they control for resources they don\'t control. Scholars seriously underestimated the ecological diversity of the Maya landscape and thus assumed that <span class="blank">_______</span>',
+    question: 'Which choice most logically completes the text?',
+    choices: [
+      { letter: 'A', text: 'marketplaces likely would not have attracted many traders from outside the regions controlled by the Maya.' },
+      { letter: 'B', text: 'farming practices would have been largely the same throughout Maya lands even if the crops people produced varied significantly.' },
+      { letter: 'C', text: 'marketplaces would not have enabled Maya people to acquire many products different from those they already produced.' },
+      { letter: 'D', text: 'farmers would trade agricultural products only if they had already produced enough to meet their own needs.' }
+    ],
+    correct: 'C',
+    whyCorrect: 'Logic chain: marketplaces exist to trade for things you don\'t have → scholars thought Maya land had LOW diversity → so they assumed everyone had the same stuff → so they assumed marketplaces couldn\'t give people anything NEW. Match.',
+    whyWrong: {
+      A: 'About outside traders — passage never discusses external trade.',
+      B: 'Contradictory — if crops "varied significantly" there\'d be a REASON for marketplaces.',
+      D: 'About farmers\' personal needs — passage never discusses that condition.'
+    },
+    hack: '<strong>Follow the chain of logic in the passage.</strong> Each sentence builds on the last. The blank must complete the chain. Scholars thought X → Y → so they assumed Z. Find Z.'
+  },
+  {
+    n: 15, id: '4ba0695d', skill: 'inferences', skillLabel: 'Inferences', difficulty: 'hard',
+    type: 'iai-inf',
+    passage: 'The alpaca was domesticated by Indigenous peoples in the Andes about 7,000 years ago. But which wild species did it descend from, the vicuña or guanaco? A research team led by Ruiwen Fan may have solved the mystery, concluding that the alpaca is the domesticated form of the vicuña but that the modern alpaca gets only 64 percent of its genetic material from its wild ancestor. The rest comes from the domesticated llama. The llama, meanwhile, gets 95.5 percent of its genetic material from its own wild ancestor, the guanaco, and the rest from the alpaca. The llama and alpaca apparently interbred widely for only a handful of generations between 400 and 600 years ago. Assuming that the findings of Fan\'s team are valid, it can be inferred that <span class="blank">_______</span>',
+    question: 'Which choice most logically completes the text?',
+    choices: [
+      { letter: 'A', text: 'modern llama populations have a greater degree of genetic diversity, on average, than modern alpaca populations do.' },
+      { letter: 'B', text: 'the domestication process of the alpaca may have involved some introduction of genetic material from the llama.' },
+      { letter: 'C', text: 'the period of interbreeding resulted in a greater genetic difference between alpacas and their wild ancestors than between llamas and their wild ancestors.' },
+      { letter: 'D', text: 'if they were subjected to genetic testing, modern populations of guanacos and vicuñas would likely show traces of ancient interbreeding as well.' }
+    ],
+    correct: 'C',
+    whyCorrect: 'Math check: alpacas got 36% of genes from interbreeding. Llamas got only 4.5%. Interbreeding affected alpacas WAY more — pushing them further from their wild ancestor (vicuña) than llamas are from theirs (guanaco). Direct logical conclusion.',
+    whyWrong: {
+      A: 'Genetic diversity within a species ≠ what the passage discusses. Off-topic.',
+      B: 'Domestication = 7,000 years ago. Interbreeding = 400-600 years ago. Wrong timeline.',
+      D: 'Passage gives no info about modern wild guanacos/vicuñas. Can\'t infer.'
+    },
+    hack: '<strong>Inferences must follow from passage MATH or LOGIC.</strong> Here it\'s percentages — 36% vs 4.5% means alpacas drifted more. Stay close to the numbers.'
+  },
+  {
+    n: 16, id: 'd95a0bb8', skill: 'inferences', skillLabel: 'Inferences', difficulty: 'hard',
+    type: 'iai-inf',
+    passage: 'The ratio of methane to other atmospheric constituents — represented by a measure called the methane mole fraction — influences a variety of meteorological phenomena, notably precipitation and humidity. For Titan, Saturn\'s largest moon, the observational data that exist are too sparse and discrepant to fully constrain the range of the methane mole fraction at various atmospheric levels. Juan Lora and colleagues point out that outputs of the IPSL atmospheric model of Titan, which track closely to observations in some respects, reflect how the model\'s developers responded to this challenge: by prescribing a uniform methane mole fraction for the lowest level of the atmosphere. It is therefore important to note that <span class="blank">_______</span>',
+    question: 'Which choice most logically completes the text?',
+    choices: [
+      { letter: 'A', text: 'some disagreements between the model\'s simulations of Titan\'s precipitation and humidity and the moon\'s actual precipitation and humidity are to be expected.' },
+      { letter: 'B', text: 'further observations of Titan may clarify the moon\'s methane mole fraction sufficiently for the model to employ a single value rather than a range.' },
+      { letter: 'C', text: 'even though the model\'s outputs sometimes agree with observational data, Titan\'s real methane mole fraction is likely higher than the methane mole fraction used in the model.' },
+      { letter: 'D', text: 'inconsistencies across the model\'s simulations of Titan\'s precipitation and humidity could be attributable to variations in the moon\'s methane mole fraction.' }
+    ],
+    correct: 'A',
+    whyCorrect: 'Logic: methane affects precipitation/humidity. Model uses a SINGLE uniform value for methane (a simplification). Reality is more complex. So model predictions won\'t perfectly match reality → <strong>disagreements expected</strong>.',
+    whyWrong: {
+      B: 'Model already uses a single value. Backwards.',
+      C: 'No evidence whether the real value is higher or lower than the model\'s value.',
+      D: 'Model uses ONE value (no variation), so can\'t blame inconsistencies on variations within the model.'
+    },
+    hack: '<strong>Simplification = imperfect predictions.</strong> When a model "simplifies" reality, expect "predictions won\'t perfectly match." That\'s the inference.'
+  },
+  {
+    n: 17, id: '3cc2eacc', skill: 'inferences', skillLabel: 'Inferences', difficulty: 'medium',
+    type: 'iai-inf',
+    passage: 'In a study of the mechanisms underlying associative memory — or the ability to learn and remember connections between inherently unrelated things — neuroscientists Kei Igarashi, Jasmine Chavez, and others presented mice with memory tests. The team discovered that fan cells, a type of cell found in the medial temporal lobe of the brain, are necessary for the acquisition of new associative memories. They also found that fan cell activity requires dopamine, a chemical the brain produces in response to pleasure and rewards. Consequently, receiving a reward should likely help to <span class="blank">_______</span>',
+    question: 'Which choice most logically completes the text?',
+    choices: [
+      { letter: 'A', text: 'decrease an individual\'s capacity to utilize dopamine.' },
+      { letter: 'B', text: 'increase an individual\'s capacity to recognize differences between unrelated things.' },
+      { letter: 'C', text: 'increase an individual\'s capacity to form associative memories.' },
+      { letter: 'D', text: 'decrease an individual\'s capacity to create fan cells.' }
+    ],
+    correct: 'C',
+    whyCorrect: 'Chain: rewards → produce dopamine → enables fan cells → enables associative memory. So <strong>rewards → better associative memory</strong>.',
+    whyWrong: {
+      A: 'Rewards PRODUCE dopamine, not decrease its use. Backwards.',
+      B: 'Associative memory = recognizing CONNECTIONS, not differences. Wrong concept.',
+      D: 'Passage never says rewards affect creation of fan cells.'
+    },
+    hack: '<strong>Follow the cause-and-effect chain.</strong> If A→B→C, then A→C. Reward → dopamine → fan cells → memory. So reward → memory.'
+  },
+  {
+    n: 18, id: '54057e3f', skill: 'inferences', skillLabel: 'Inferences', difficulty: 'medium',
+    type: 'iai-inf',
+    passage: 'Although military veterans make up a small proportion of the total population of the United States, they occupy a significantly higher proportion of the jobs in the civilian government. One possible explanation for this disproportionate representation is that military service familiarizes people with certain organizational structures that are also reflected in the civilian government bureaucracy, and this familiarity thus <span class="blank">_______</span>',
+    question: 'Which choice most logically completes the text?',
+    choices: [
+      { letter: 'A', text: 'makes civilian government jobs especially appealing to military veterans.' },
+      { letter: 'B', text: 'alters the typical relationship between military service and subsequent career preferences.' },
+      { letter: 'C', text: 'encourages nonveterans applying for civilian government jobs to consider military service instead.' },
+      { letter: 'D', text: 'increases the number of civilian government jobs that require some amount of military experience to perform.' }
+    ],
+    correct: 'A',
+    whyCorrect: 'Setup: veterans are overrepresented in civilian government jobs because of similar org structures. Familiarity → comfort → <strong>appeal</strong>. Logical conclusion.',
+    whyWrong: {
+      B: 'No "typical relationship" was ever defined. Off-topic.',
+      C: 'About nonveterans. Passage focuses on why veterans take those jobs.',
+      D: 'Says jobs require military experience. Passage says veterans choose them, not that jobs require military.'
+    },
+    hack: '<strong>"Familiarity makes ___ appealing" is the standard logic.</strong> When something is familiar, people are drawn to it. Match.'
+  },
+  {
+    n: 19, id: 'aaddd60f', skill: 'inferences', skillLabel: 'Inferences', difficulty: 'hard',
+    type: 'iai-inf',
+    passage: 'Scientists studying Mars long thought the history of its crust was relatively simple. One reason for this is that geologic and climate data collected by a spacecraft showed that the crust was largely composed of basalt, likely as a result of intense volcanic activity that brought about a magma ocean, which then cooled to form the planet\'s surface. A study led by Valerie Payré focused on additional information — further analysis of data collected by the spacecraft and infrared wavelengths detected from Mars\'s surface — that revealed the presence of surprisingly high concentrations of silica in certain regions on Mars. Since a planetary surface that formed in a mostly basaltic environment would be unlikely to contain large amounts of silica, Payré concluded that <span class="blank">_______</span>',
+    question: 'Which choice most logically completes the text?',
+    choices: [
+      { letter: 'A', text: 'the information about silica concentrations collected by the spacecraft is likely more reliable than the silica information gleaned from infrared wavelengths detected from Mars\'s surface.' },
+      { letter: 'B', text: 'high silica concentrations on Mars likely formed from a different process than that which formed the crusts of other planets.' },
+      { letter: 'C', text: 'having a clearer understanding of the composition of Mars\'s crust and the processes by which it formed will provide more insight into how Earth\'s crust formed.' },
+      { letter: 'D', text: 'Mars\'s crust likely formed as a result of other major geological events in addition to the cooling of a magma ocean.' }
+    ],
+    correct: 'D',
+    whyCorrect: 'Cooling magma = basalt. Basaltic surface ≠ high silica. But Mars HAS high silica in places. So basalt alone can\'t explain everything → <strong>OTHER geological events must have happened too</strong>.',
+    whyWrong: {
+      A: 'Passage doesn\'t compare data sources for reliability.',
+      B: 'Other planets aren\'t mentioned at all.',
+      C: 'Earth\'s crust never mentioned.'
+    },
+    hack: '<strong>If the data CONTRADICTS the simple theory, the inference is "there\'s more going on."</strong> Mars had simple-magma theory + complex-silica data. Conclusion: more processes involved.'
+  },
+  {
+    n: 20, id: 'c4d43991', skill: 'inferences', skillLabel: 'Inferences', difficulty: 'easy',
+    type: 'iai-inf',
+    passage: 'Archaeologists have been debating the origin of a rare form of lead found in Shang dynasty (1766–1046 BCE) bronze artifacts since its presence was discovered in China in the 1990s. Different researchers have proposed theories on which regions of the world would have had the raw materials containing the specific lead in these artifacts, but no conclusive evidence has been presented. What is intriguing is that bronze artifacts from China dated after the Shang dynasty do not contain this form of lead, suggesting that <span class="blank">_______</span>',
+    question: 'Which choice most logically completes the text?',
+    choices: [
+      { letter: 'A', text: 'Shang dynasty bronze pieces are rare and therefore more valuable than those from other time periods.' },
+      { letter: 'B', text: 'the source of some of the raw materials used to make bronze was exploited only until the end of the Shang dynasty.' },
+      { letter: 'C', text: 'bronze was used for a short time during the Shang dynasty before different metals were used to make artifacts.' },
+      { letter: 'D', text: 'methods used to analyze bronze artifacts are not useful on pieces that are dated after the Shang dynasty.' }
+    ],
+    correct: 'B',
+    whyCorrect: 'Shang artifacts have the rare lead. Post-Shang artifacts DON\'T. The simplest explanation: whatever <strong>source</strong> of that lead was used during Shang, it stopped being used after.',
+    whyWrong: {
+      A: 'Passage doesn\'t discuss value or rarity of the artifacts themselves.',
+      C: 'Passage explicitly mentions "bronze artifacts from China dated after the Shang dynasty" — so bronze kept being used.',
+      D: 'Passage never mentions analysis methods.'
+    },
+    hack: '<strong>If something stopped appearing, the source stopped being used.</strong> Lead appears in Shang but not after = the lead source was abandoned after Shang.'
+  },
+  {
+    n: 21, id: '123bd312', skill: 'inferences', skillLabel: 'Inferences', difficulty: 'medium',
+    type: 'iai-inf',
+    passage: 'Herbivorous sauropod dinosaurs could grow more than 100 feet long and weigh up to 80 tons, and some researchers have attributed the evolution of sauropods to such massive sizes to increased plant production resulting from high levels of atmospheric carbon dioxide during the Mesozoic era. However, there is no evidence of significant spikes in carbon dioxide levels coinciding with relevant periods in sauropod evolution, such as when the first large sauropods appeared, when several sauropod lineages underwent further evolution toward gigantism, or when sauropods reached their maximum known sizes, suggesting that <span class="blank">_______</span>',
+    question: 'Which choice most logically completes the text?',
+    choices: [
+      { letter: 'A', text: 'fluctuations in atmospheric carbon dioxide affected different sauropod lineages differently.' },
+      { letter: 'B', text: 'the evolution of larger body sizes in sauropods did not depend on increased atmospheric carbon dioxide.' },
+      { letter: 'C', text: 'atmospheric carbon dioxide was higher when the largest known sauropods lived than it was when the first sauropods appeared.' },
+      { letter: 'D', text: 'sauropods probably would not have evolved to such immense sizes if atmospheric carbon dioxide had been even slightly higher.' }
+    ],
+    correct: 'B',
+    whyCorrect: 'Theory: big sauropods came from high CO₂. Reality: no CO₂ spikes at key evolutionary moments. So <strong>CO₂ wasn\'t the cause</strong>.',
+    whyWrong: {
+      A: 'Passage doesn\'t discuss fluctuations affecting different lineages.',
+      C: 'Passage says NO significant spikes ever — not that levels were higher at one time.',
+      D: 'Passage doesn\'t discuss what would happen with slightly higher CO₂.'
+    },
+    hack: '<strong>Theory + contradicting evidence = theory is wrong.</strong> If a study finds NO support for a proposed cause, the inference is: that cause doesn\'t explain the thing.'
+  },
+  {
+    n: 22, id: '08395130', skill: 'inferences', skillLabel: 'Inferences', difficulty: 'hard',
+    type: 'iai-inf',
+    passage: 'The Hubble Space Telescope (HST) is projected to maintain operation until at least 2030, but it has already revolutionized high-resolution imaging of solar-system bodies in visible and ultraviolet (UV) light wavelengths, notwithstanding that only about 6% of the bodies imaged by the HST are within the solar system. NASA researcher Cindy L. Young and colleagues assert that a new space telescope dedicated exclusively to solar-system observations would permit an extensive survey of minor solar-system bodies and long-term UV observation to discern how solar-system bodies change over time. Young and colleagues\' recommendation therefore implies that the HST <span class="blank">_______</span>',
+    question: 'Which choice most logically completes the text?',
+    choices: [
+      { letter: 'A', text: 'will likely continue to be used primarily to observe objects outside the solar system.' },
+      { letter: 'B', text: 'will no longer be used to observe solar system objects if the telescope recommended by Young and colleagues is deployed.' },
+      { letter: 'C', text: 'can be modified to observe the features of solar system objects that are of interest to Young and colleagues.' },
+      { letter: 'D', text: 'lacks the sensors to observe the wavelengths of light needed to discern how solar system bodies change over time.' }
+    ],
+    correct: 'A',
+    whyCorrect: 'HST only spends 6% of time on solar-system bodies — so 94% on stuff OUTSIDE the solar system. If a new telescope handles solar-system work, HST keeps doing what it\'s mostly doing already: <strong>looking outside the solar system</strong>.',
+    whyWrong: {
+      B: 'Too strong. Recommendation doesn\'t mean HST stops solar-system work entirely.',
+      C: 'Passage never mentions modifying HST. Fabricated.',
+      D: 'Passage says HST already does UV observations. Can\'t infer it lacks sensors.'
+    },
+    hack: '<strong>Watch for "too strong" wrong answers.</strong> "Will no longer be used" / "lacks all sensors" — extreme claims are usually wrong. The right answer is usually moderate.'
   }
-];;
+];

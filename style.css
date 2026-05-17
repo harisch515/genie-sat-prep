@@ -35,6 +35,10 @@
   --c-sec: #8b2635;
   --c-form: #2a6f7a;
   --c-bound: #a04a2e;
+  --c-iai: #5a3a6b;
+  --c-central: #4a4a8c;
+  --c-evidence: #2d6b7a;
+  --c-inferences: #8c3a5c;
 
   --serif: "Fraunces", Georgia, serif;
   --sans: "DM Sans", -apple-system, sans-serif;
@@ -1013,3 +1017,14 @@ body {
 }
 .choice.correct .vote-tally { background: var(--correct); color: white; }
 .choice.wrong .vote-tally { background: var(--wrong); color: white; }
+
+
+/* ============ CHART WRAPPER (Command of Evidence) ============ */
+.chart-wrap {
+  margin: 24px 0 28px;
+  padding: 20px 24px;
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+  overflow-x: auto;
+}
